@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fcc52a9-4955-4453-8e3f-e8d560536f42" name="Changes" comment="" />
+    <list default="true" id="0fcc52a9-4955-4453-8e3f-e8d560536f42" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +35,7 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Utente/OneDrive/Documenti/Miei Documenti/Corso Java 2023 Tree/Esercizi Corso Java&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.labirinto.Labirinto">
     <configuration name="Anagrammi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Anagrammi" />
       <module name="Esercizi Corso Java" />
@@ -41,8 +43,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DispariAPari" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DispariAPari" />
+      <module name="Esercizi Corso Java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Labirinto" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Labirinto" />
+      <module name="Esercizi Corso Java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="labirinto.Labirinto" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="labirinto.Labirinto" />
+      <module name="Esercizi Corso Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="labirinto.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.labirinto.Labirinto" />
+        <item itemvalue="Application.Labirinto" />
+        <item itemvalue="Application.DispariAPari" />
         <item itemvalue="Application.Anagrammi" />
       </list>
     </recent_temporary>
