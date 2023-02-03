@@ -1,8 +1,11 @@
 package secondi_esercizi;
 
+import java.util.Arrays;
+
 public class Cerchio {
 
     int raggio;
+    Colore colore = new Colore();
 
     public Cerchio(int raggio){
         this.raggio=raggio;

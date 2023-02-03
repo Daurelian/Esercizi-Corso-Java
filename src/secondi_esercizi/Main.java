@@ -6,6 +6,7 @@ public class Main {
         contatore();
         quadrato(4);
         cerchio(5);
+        colore();
     }
 
     //Contatore
@@ -28,6 +29,10 @@ public class Main {
         System.out.println("Lato: :" +quadrato.lato);
         System.out.println("Perimetro :"+quadrato.calcolaPerimetro());
         quadrato.stampaQuadrato();
+        System.out.println("Colore e Cambia Colore - Quadrato");
+        quadrato.colore.stampaColore();
+        quadrato.colore.setColore(5,6,7);
+        quadrato.colore.stampaColore();
     }
 
     public static void cerchio(int n){
@@ -35,7 +40,18 @@ public class Main {
         System.out.println("Raggio :"+ cerchio.raggio);
         System.out.println("Circonferenza :"+ cerchio.calcolaCirconferenza());
         System.out.println("Area :"+cerchio.calcolaArea());
+        System.out.println("Colore e Cambia Colore - Cerchio");
+        cerchio.colore.stampaColore();
+        cerchio.colore.setColore(2,3,4);
+        cerchio.colore.stampaColore();
     }
 
+    public static void colore(){
+        System.out.println("Colore e Cambia Colore - Classe colore");
+    Colore colore = new Colore(22,55,77);
+    colore.stampaColore();
+    colore.setColore(33,66,88);
+    colore.stampaColore();
+    }
 
 }
