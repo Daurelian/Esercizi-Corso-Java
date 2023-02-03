@@ -1,3 +1,5 @@
+package primi_esercizi;
+
 public class Armonica {
     public static void main(String[] args) {
         System.out.println(harmonicSum(0) == (0));

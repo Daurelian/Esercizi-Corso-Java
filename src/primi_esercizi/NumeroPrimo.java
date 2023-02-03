@@ -1,3 +1,5 @@
+package primi_esercizi;
+
 public class NumeroPrimo {
     public static void main(String[] args) {
         int number = 0;

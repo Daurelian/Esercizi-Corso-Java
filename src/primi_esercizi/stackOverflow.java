@@ -1,3 +1,5 @@
+package primi_esercizi;
+
 public class stackOverflow {
     public static void main(String[] args) {
         System.out.println(factorial(400));

@@ -1,3 +1,5 @@
+package primi_esercizi;
+
 public class SommaDiagonale {
     public static void main(String[] args) {
         int[][] values = {{1, 2, 3}, {2, 5, 4}, {8, 3, 6}};

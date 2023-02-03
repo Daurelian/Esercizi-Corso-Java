@@ -1,3 +1,5 @@
+package primi_esercizi;
+
 public class Palindroma {
     public static void main(String[] args) {
         System.out.println(isPalindrome("c"));

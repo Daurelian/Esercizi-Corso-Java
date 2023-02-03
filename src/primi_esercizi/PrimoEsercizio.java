@@ -1,3 +1,4 @@
+package primi_esercizi;
 
 import java.util.Scanner;
 

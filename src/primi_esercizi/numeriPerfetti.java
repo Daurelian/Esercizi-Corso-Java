@@ -1,3 +1,5 @@
+package primi_esercizi;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 

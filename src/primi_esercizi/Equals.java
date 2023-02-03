@@ -1,3 +1,5 @@
+package primi_esercizi;
+
 public class Equals {
     public static void main(String[] args) {
         String a = "ciao come va ?";
