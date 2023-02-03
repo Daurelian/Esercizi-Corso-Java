@@ -4,10 +4,11 @@ public class Lampadina {
 
     int[] stato;
     int contatore=0;
-    int resistenza=5;
+    int resistenza;
 
     public Lampadina() {
         this.stato = new int []{1,0,0};
+        resistenza=5;
     }
 
     public Lampadina(int resistenza) {
