@@ -7,6 +7,7 @@ public class Main {
         quadrato(4);
         cerchio(5);
         colore();
+        lampadina();
     }
 
     //Contatore
@@ -52,6 +53,15 @@ public class Main {
     colore.stampaColore();
     colore.setColore(33,66,88);
     colore.stampaColore();
+    }
+
+    public static void lampadina(){
+        Lampadina lampadina = new Lampadina();
+        lampadina.mostraStato();
+        for(int i=0; i<5; i++){
+            lampadina.click();
+            lampadina.mostraStato();
+        }
     }
 
 }

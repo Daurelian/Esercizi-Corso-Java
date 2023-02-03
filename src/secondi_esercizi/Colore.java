@@ -7,9 +7,9 @@ int[] colore=new int[3];
 
 
     public Colore(){
-        this.colore[0]=255;
-        this.colore[1]=255;
-        this.colore[2]=255;
+        this.colore[0]=0;
+        this.colore[1]=0;
+        this.colore[2]=0;
     }
     public Colore(int r, int g, int b){
     this.colore[0]=r;
@@ -25,12 +25,12 @@ int[] colore=new int[3];
         System.out.println();
     }
     public int[] getBianco() {
-        final int[] bianco={0,0,0};
+        final int[] bianco={255,255,255};
         return bianco;
     }
 
     public int[] getNero() {
-        final int[] nero={255,255,255};
+        final int[] nero={0,0,0};
         return nero;
     }
 
