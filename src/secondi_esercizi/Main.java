@@ -23,6 +23,9 @@ public class Main {
         testInterruttori();
         System.out.println();
 
+        testCorrente();
+        System.out.println();
+
     }
 
     //Contatore
@@ -73,7 +76,7 @@ public class Main {
     public static void testLampadina(){
         Lampadina lampadina = new Lampadina();
         lampadina.mostraStato();
-        for(int i=0; i<5; i++){
+        for(int i=0; i<10; i++){
             lampadina.click();
             lampadina.mostraStato();
         }
@@ -125,4 +128,58 @@ public class Main {
                     return checkInputInterruttori(input);
             }
         }
+
+        public static void testCorrente(){
+            Lampadina lampadina1= new Lampadina();
+            Lampadina lampadina2= new Lampadina();
+            System.out.println("TEST CORRENTE");
+            System.out.println("Accendo lampadina 2 come test");
+            lampadina2.click();
+            lampadina2.mostraStato();
+            System.out.println("Stacco la corrente");
+            lampadina1.interruttoreCorrente();
+            System.out.println();
+            System.out.println("Stato lampadina 1:");
+            lampadina1.mostraStato();
+            System.out.println();
+            System.out.println("Stato lampadina 2:");
+            lampadina2.checkCorrente();
+            lampadina2.mostraStato();
+            System.out.println();
+            System.out.println("Provo a clickare sulla prima lampadina");
+            for(int i=0; i<8; i++){
+                lampadina1.click();
+                lampadina1.mostraStato();
+            }
+            System.out.println();
+            System.out.println("Provo a clickare sulla seconda lampadina");
+            for(int i=0; i<8; i++){
+                lampadina2.click();
+                lampadina2.mostraStato();
+            }
+            System.out.println();
+            System.out.println("Riattacco la corrente");
+            lampadina1.interruttoreCorrente();
+            System.out.println();
+            System.out.println("Stato lampadina 1:");
+            lampadina1.mostraStato();
+            System.out.println();
+            System.out.println("Stato lampadina 2:");
+            lampadina2.checkCorrente();
+            lampadina2.mostraStato();
+            System.out.println();
+            System.out.println("Provo a clickare sulla prima lampadina");
+            for(int i=0; i<8; i++){
+                lampadina1.click();
+                lampadina1.mostraStato();
+            }
+            System.out.println();
+            System.out.println("Provo a clickare sulla seconda lampadina");
+            for(int i=0; i<8; i++){
+                lampadina2.click();
+                lampadina2.mostraStato();
+            }
+
+        }
+
 }
