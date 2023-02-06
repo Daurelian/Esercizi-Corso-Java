@@ -2,7 +2,6 @@ package secondi_esercizi;
 
 public class Lampadina {
     static boolean corrente= true;
-//    int[] stato;
     private Stato stato;
      enum Stato{
         SPENTO, ACCESO, ROTTO;
@@ -37,11 +36,13 @@ public class Lampadina {
 
     public void click(){
         if(!corrente){
+            if(stato== stato.ROTTO)
+                mostraStato();
+                else
             stato= stato.SPENTO;
         }else{
             if(stato== stato.ROTTO){
                     mostraStato();
-
         }else{
                 if(stato== stato.SPENTO){
                     stato= stato.ACCESO;
@@ -55,13 +56,12 @@ public class Lampadina {
                     System.out.println("Boom!!!");
                 }
             }
-
             }
 
     }
 
     public void checkContatore(){
-        if (contatore==resistenza){
+        if (contatore>=resistenza){
             stato=stato.ROTTO;
         }
 
@@ -76,14 +76,12 @@ public class Lampadina {
         if(corrente){
             if(stato!=stato.ROTTO){
                 stato=stato.ACCESO;
-            }else{
             }
         }
         //Altrimenti solo la riga sotto per spegnerle quando si stacca la corrente
         else{
             if(stato!=stato.ROTTO) {
                 stato=stato.SPENTO;
-            }else{
             }
 
         }

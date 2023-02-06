@@ -5,27 +5,32 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        testContatore();
+//        testContatore();
+//        System.out.println();
+//
+//        testQuadrato(4);
+//        System.out.println();
+//
+//        testCerchio(5);
+//        System.out.println();
+//
+//        testColore();
+//        System.out.println();
+//
+//        testLampadina();
+//        System.out.println();
+//
+//        testInterruttori();
+//        System.out.println();
+//
+//        testCorrente();
+//        System.out.println();
+
+        testBiblioteca();
         System.out.println();
 
-        testQuadrato(4);
+        testLibri();
         System.out.println();
-
-        testCerchio(5);
-        System.out.println();
-
-        testColore();
-        System.out.println();
-
-        testLampadina();
-        System.out.println();
-
-        testInterruttori();
-        System.out.println();
-
-        testCorrente();
-        System.out.println();
-
     }
 
     //Contatore
@@ -180,6 +185,44 @@ public class Main {
                 lampadina2.mostraStato();
             }
 
+        }
+
+        public static void testBiblioteca(){
+            int[] values = new int[7];
+            values[0] = 123;
+            values[1] = 4;
+            values[2] = 98;
+            values[3] = 33;
+            values[4] = 76;
+            values[5] = 2;
+            values[6] = 235;
+            Biblioteca biblioteca = new Biblioteca(values);
+            System.out.println(biblioteca.esisteLibro(76));
+            int[] libriOrdinati = biblioteca.getIndiciLibriOrdinati();
+            System.out.println(libriOrdinati[0] == 2);
+            System.out.println(libriOrdinati[1] == 4);
+            System.out.println(libriOrdinati[2] == 33);
+            System.out.println(libriOrdinati[3] == 76);
+            System.out.println(libriOrdinati[4] == 98);
+            System.out.println(libriOrdinati[5] == 123);
+            System.out.println(libriOrdinati[6] == 235);
+        }
+
+        public static void testLibri(){
+            Libro libro1 = new Libro("Titolo1", "Autore1", "Categoria1", 1);
+            Libro libro2 = new Libro("Titolo2", "Autore2", "Categoria2", 2);
+            Libro libro3 = new Libro("Titolo3", "Autore3", "Categoria3", 3);
+            Libro libro4 = new Libro("Titolo4", "Autore4", "Categoria4", 4);
+            Biblioteca biblioteca = new Biblioteca();
+            biblioteca.aggiungiLibro(libro1);
+            biblioteca.aggiungiLibro(libro2);
+            biblioteca.aggiungiLibro(libro3);
+            biblioteca.aggiungiLibro(libro4);
+
+            biblioteca.getLibriOrdinati();
+            for(Libro libro: Biblioteca.getLibri()){
+                System.out.println(libro.toString());
+            }
         }
 
 }
