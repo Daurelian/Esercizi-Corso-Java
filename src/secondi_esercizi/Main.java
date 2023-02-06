@@ -250,6 +250,15 @@ public class Main {
             ditta.addRiparazioni(riparazione2);
             ditta.addRiparazioni(riparazione3);
             ditta.addRiparazioni(riparazione4);
+            System.out.println("Lista dei tecnici");
+            System.out.println(Arrays.toString(ditta.getTecnici()));
+            System.out.println();
+
+            System.out.println("Provo ad aggiungere lo stesso tecnico");
+            ditta.addTecnico(tecnico1);
+            System.out.println();
+            System.out.println("Lista dei tecnici");
+            System.out.println(Arrays.toString(ditta.getTecnici()));
 
             System.out.println("Lista di tutte le riparazioni");
             System.out.println(Arrays.toString(ditta.getRiparazioni()));
@@ -259,8 +268,29 @@ public class Main {
             System.out.println("Ho Assegnato due riparazioni, le rimanenti in attesa sono:");
             System.out.println(Arrays.toString(ditta.listaRiparazioniAttesa()));
             System.out.println();
+            System.out.println("Provo ad assegnare lo stesso tecnico");
+            ditta.assegnaRiparazione(tecnico1, riparazione1);
+            System.out.println();
             System.out.println("Prossima riparazione con priorità alta: ");
             System.out.println(ditta.ottieniRiparazioneMaggioreP().toString());
+            ditta.riparazioneConclusa(tecnico2);
+            System.out.println();
+
+            System.out.println("Mando in ferie due tecnici");
+            Tecnico[] tecniciFerie= new Tecnico[2];
+            tecniciFerie[0]=tecnico3;
+            tecniciFerie[1]=tecnico4;
+            ditta.mandainFerie(tecniciFerie);
+            System.out.println();
+
+            System.out.println("Lista dei tecnici");
+            System.out.println(Arrays.toString(ditta.getTecnici()));
+
+            System.out.println("Provo a mandare in ferie i tecnici occupati");
+            Tecnico[] tecniciFerie2= new Tecnico[2];
+            tecniciFerie2[0]=tecnico1;
+            tecniciFerie2[1]=tecnico2;
+            ditta.mandainFerie(tecniciFerie2);
         }
 
 }

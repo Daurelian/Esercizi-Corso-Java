@@ -23,6 +23,10 @@ public class Riparazione {
         return priorità;
     }
 
+    public String getIndirizzo() {
+        return indirizzo;
+    }
+
     public String toString(){
         String temp_tecnico;
         if (tecnico==null){

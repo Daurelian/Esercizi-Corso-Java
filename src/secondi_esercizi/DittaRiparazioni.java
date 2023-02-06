@@ -1,6 +1,7 @@
 package secondi_esercizi;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class DittaRiparazioni {
     ArrayList <Tecnico> tecnici= new ArrayList<>();
@@ -19,7 +20,18 @@ public class DittaRiparazioni {
     }
 
     public void addTecnico(Tecnico tecnico){
-        tecnici.add(tecnico);
+        if(checkTecnici(tecnico)){
+            tecnici.add(tecnico);
+        }else{
+            System.out.println("Esiste già questo tecnico");
+        }
+    }
+    public boolean checkTecnici(Tecnico tecnico){
+        for(Tecnico c_tecnico: tecnici){
+            if(c_tecnico.getNome()==tecnico.getNome())
+                return false;
+        }
+        return true;
     }
 
     public void addRiparazioni(Riparazione riparazione){
@@ -37,7 +49,12 @@ public class DittaRiparazioni {
     }
 
     public void assegnaRiparazione(Tecnico tecnico, Riparazione riparazione){
-        riparazione.tecnico=tecnico.getNome();
+        if(!tecnico.isAssegnato()){
+            riparazione.tecnico=tecnico.getNome();
+            tecnico.setAssegnato(true);
+            tecnico.setRiparazione(riparazione);
+        }else
+            System.out.println("Tecnico già assegnato");
     }
 
     public Riparazione ottieniRiparazioneMaggioreP(){
@@ -62,5 +79,40 @@ public class DittaRiparazioni {
             }
         }
         return maggiorePriorità;
+    }
+
+    public void riparazioneConclusa(Tecnico tecnico){
+        int count=0;
+        ArrayList<Riparazione> riparazioniAggiornate= new ArrayList<>();
+        for(Riparazione riparazione: riparazioni){
+            if(riparazione.tecnico==tecnico.getNome()){
+                riparazione.conclusa=true;
+                System.out.println("La riparazione è conclusa con successo!");
+
+            }else{
+                riparazioniAggiornate.add(riparazione);
+                count++;
+            }
+        }
+        if(count==riparazioni.size()){
+            System.out.println("Nessuna riparazione trovata con quel tecnico");
+        }else{
+            riparazioni=riparazioniAggiornate;
+            System.out.println("Ecco la lista delle riparazioni rimanenti:");
+            System.out.println(Arrays.toString(getRiparazioni()));
+        }
+    }
+
+    public void mandainFerie(Tecnico[] tecniciFerie){
+        for(Tecnico tecnicoFerie: tecniciFerie){
+            if(tecnici.contains(tecnicoFerie)){
+                if(tecnicoFerie.getRiparazione()!=null){
+                    System.out.println("Impossibile, il tecnico è già assegnato");
+                }else
+                tecnici.remove(tecnicoFerie);
+            }
+        }
+        System.out.println("I Tecnici sono stati mandati in ferie. Ecco la nuova lista dei Tecnici");
+        System.out.println(Arrays.toString(getTecnici()));
     }
 }
