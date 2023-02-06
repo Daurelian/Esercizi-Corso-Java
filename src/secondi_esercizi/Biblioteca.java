@@ -38,7 +38,6 @@ public class Biblioteca {
 
     public void getLibriOrdinati() {
         Libro temp;
-
         for (int i=0; i<libri.size()-1; i++) {
             for (int j=i+1; j<libri.size(); j++) {
                 if (libri.get(i).getIndice() > libri.get(j).getIndice()) {

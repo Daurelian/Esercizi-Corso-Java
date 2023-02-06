@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fcc52a9-4955-4453-8e3f-e8d560536f42" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/secondi_esercizi/Biblioteca.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/secondi_esercizi/Libro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/secondi_esercizi/DittaRiparazioni.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/secondi_esercizi/Riparazione.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/secondi_esercizi/Tecnico.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/secondi_esercizi/Biblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/secondi_esercizi/Biblioteca.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/secondi_esercizi/Lampadina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/secondi_esercizi/Lampadina.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/secondi_esercizi/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/secondi_esercizi/Main.java" afterDir="false" />
     </list>

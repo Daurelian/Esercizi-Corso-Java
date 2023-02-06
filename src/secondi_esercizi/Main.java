@@ -1,5 +1,6 @@
 package secondi_esercizi;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -16,7 +17,7 @@ public class Main {
 //
 //        testColore();
 //        System.out.println();
-//
+
 //        testLampadina();
 //        System.out.println();
 //
@@ -26,11 +27,14 @@ public class Main {
 //        testCorrente();
 //        System.out.println();
 
-        testBiblioteca();
-        System.out.println();
+//        testBiblioteca();
+//        System.out.println();
+//
+//        testLibri();
+//        System.out.println();
 
-        testLibri();
-        System.out.println();
+         testDittaRiparazioni();
+         System.out.println();
     }
 
     //Contatore
@@ -223,6 +227,40 @@ public class Main {
             for(Libro libro: Biblioteca.getLibri()){
                 System.out.println(libro.toString());
             }
+        }
+
+        public static void testDittaRiparazioni(){
+            Tecnico tecnico1 = new Tecnico("Giuseppe");
+            Tecnico tecnico2 = new Tecnico("Michele");
+            Tecnico tecnico3 = new Tecnico("Davide");
+            Tecnico tecnico4 = new Tecnico("Lucrezia");
+
+            DittaRiparazioni ditta= new DittaRiparazioni();
+            ditta.addTecnico(tecnico1);
+            ditta.addTecnico(tecnico2);
+            ditta.addTecnico(tecnico3);
+            ditta.addTecnico(tecnico4);
+
+            Riparazione riparazione1= new Riparazione(Riparazione.Priorità.BASSA, "Via A");
+            Riparazione riparazione2= new Riparazione(Riparazione.Priorità.MEDIA, "Via B");
+            Riparazione riparazione3= new Riparazione(Riparazione.Priorità.ALTA, "Via C");
+            Riparazione riparazione4= new Riparazione(Riparazione.Priorità.DISASTRO, "Via D");
+
+            ditta.addRiparazioni(riparazione1);
+            ditta.addRiparazioni(riparazione2);
+            ditta.addRiparazioni(riparazione3);
+            ditta.addRiparazioni(riparazione4);
+
+            System.out.println("Lista di tutte le riparazioni");
+            System.out.println(Arrays.toString(ditta.getRiparazioni()));
+
+            ditta.assegnaRiparazione(tecnico1, riparazione1);
+            ditta.assegnaRiparazione(tecnico2, riparazione2);
+            System.out.println("Ho Assegnato due riparazioni, le rimanenti in attesa sono:");
+            System.out.println(Arrays.toString(ditta.listaRiparazioniAttesa()));
+            System.out.println();
+            System.out.println("Prossima riparazione con priorità alta: ");
+            System.out.println(ditta.ottieniRiparazioneMaggioreP().toString());
         }
 
 }

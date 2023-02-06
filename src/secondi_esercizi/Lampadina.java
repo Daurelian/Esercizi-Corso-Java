@@ -10,9 +10,7 @@ public class Lampadina {
     int resistenza;
 
     public Lampadina() {
-        this.stato = stato.SPENTO;
-
-        resistenza=5;
+        this(5);
     }
 
     public Lampadina(int resistenza) {
