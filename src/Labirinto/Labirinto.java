@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Labirinto {
     public static void main(String[] args) {
+//        System.out.println(Arrays.deepToString(generalabirinto(5)));
         char[][] labirinto_statico = {{'-', '-', 'W', 'W', '-'},
                 {'-', 'W', '-', 'W', '-'},
                 {'P', 'W', '-', 'W', 'W'},
@@ -123,4 +124,114 @@ public class Labirinto {
             stampaLabirinto(labirinto);
         }
     }
+
+//    public static char[][] generalabirinto(int n){
+//        char[][]labirinto=new char[n][n];
+//        for(int i=0; i<n; i++){
+//            for(int j=0; j<n; j++){
+//                if(Math.random()<0.70){
+//                    labirinto[i][j]='W';
+//                }else
+//                labirinto[i][j]='-';
+//            }
+//        }
+//        checkLabirinto(labirinto);
+//        stampaLabirinto(labirinto);
+//        System.out.println();
+//        return labirinto;
+//    }
+//    public static char[][]checkLabirinto(char[][]labirinto){
+//        for(int i=0; i<labirinto.length; i++){
+//            for(int j=0; j<labirinto[i].length;j++){
+//                //Prima colonna - sblocca centro
+//                if(i== labirinto.length/2  && j==0){
+//                    if (labirinto[i-1][j]=='W' && labirinto[i+1][j]=='W'){
+//                        labirinto[i][j]='-';
+//                    }
+//                }
+//                // Siamo al centro
+//                if(j>0 && j<labirinto[i].length-1 && i > 0 && i<labirinto.length-1){
+//                   //se siamo attorniati da W, aggiungiamo un - random            sx up dx down
+//                   if(labirinto[i][j]=='-' || labirinto[i][j]=='W'){
+//                       if(labirinto[i][j-1]=='W' && labirinto[i-1][j]=='W' && labirinto[i][j+1]=='W' && labirinto[i+1][j]=='W'){
+//                           if(Math.random()<0.24)
+//                               labirinto[i][j-1]='-'; //sx
+//                           else if (Math.random()<0.49)
+//                               labirinto[i-1][j]='-'; //up
+//                           else if (Math.random()<0.74)
+//                               labirinto[i][j+1]='-'; //dx
+//                           else labirinto[i+1][j]='-'; //down
+//                       }
+//                   }
+//                   //condizione per sbloccare il trattino se c'è solo un  -
+//                    if(labirinto[i][j]=='W'){
+//                        if(labirinto[i][j-1]=='-' && labirinto[i-1][j]=='W' && labirinto[i][j+1]=='W' && labirinto[i+1][j]=='W'){
+//                            labirinto[i][j]='-';
+//                            labirinto[i][j+1]='-';
+//                        }
+//                        if(labirinto[i][j-1]=='W' && labirinto[i-1][j]=='-' && labirinto[i][j+1]=='W' && labirinto[i+1][j]=='W'){
+//                            labirinto[i][j]='-';
+//                            labirinto[i][j+1]='-';
+//                        }
+//                        if(labirinto[i][j-1]=='-' && labirinto[i-1][j]=='-' && labirinto[i][j+1]=='-' && labirinto[i+1][j]=='W'){
+//                            labirinto[i][j]='-';
+//                            labirinto[i][j-1]='-';
+//                        }
+//                        if(labirinto[i][j-1]=='W' && labirinto[i-1][j]=='W' && labirinto[i][j+1]=='W' && labirinto[i+1][j]=='-'){
+//                            labirinto[i][j]='-';
+//                            labirinto[i][j+1]='-';
+//                        }
+//                    }
+//                }
+//                // Siamo sopra, dopo prima colonna  e prima ultima colonna              sx dx down
+//                if (i==0 && j>0 && j<labirinto[i].length-1 ){
+//                    if(labirinto[i][j]=='-' || labirinto[i][j]=='W'){
+//                        if(labirinto[i][j-1]=='W'&& labirinto[i][j+1]=='W'){
+//                            if(Math.random()<0.33){
+//                                labirinto[i][j-1]='-'; //sx
+//                            } else if (Math.random()<0.66) {
+//                                labirinto[i][j+1]='-'; // dx
+//
+//                            }else labirinto[i+1][j]='-'; //down
+//                        }
+//                    }
+//                }
+//                // Siamo sotto, dopo prima colonna  e prima ultima colonna        sx up dx
+//                if (i== labirinto.length-1 && j>0 && j<labirinto[i].length-1 ){
+//                    if(labirinto[i][j]=='-' || labirinto[i][j]=='W'){
+//                        if(labirinto[i][j-1]=='W' && labirinto[i][j+1]=='W'){
+//                            if(Math.random()<0.33){
+//                                labirinto[i][j-1]='-'; //sx
+//                            } else if (Math.random()<0.66) {
+//                                labirinto[i][j+1]='-'; //up
+//
+//                            }else labirinto[i][j+1]='-'; //dx
+//                        }
+//                    }
+//                }
+//                // Siamo a sx, prima colonna, centrali in riga
+//                if (j==0 && i>0 && i< labirinto.length-1){
+//                    if(labirinto[i][j]=='-' || labirinto[i][j]=='W'){
+//                        if(labirinto[i+1][j]=='W' && labirinto[i][j+1]=='W'&&labirinto[i-1][j]=='W'){
+//                            labirinto[i][j]='-';
+//                            labirinto[i][j+1]='-';
+//                            labirinto[i-1][j]='-';
+//                        }
+//                    }
+//                }
+//                // Siamo a dx, ultima colonna, centrali in riga
+//                if (j== labirinto[i].length-1 && i>0 && i< labirinto.length-1){
+//                    if(labirinto[i][j]=='-' || labirinto[i][j]=='W'){
+//                        if(labirinto[i+1][j]=='W' && labirinto[i][j-1]=='W'&&labirinto[i-1][j]=='W'){
+//                            labirinto[i][j]='-';
+//                            labirinto[i][j-1]='-';
+//                            labirinto[i-1][j]='-';
+//                        }
+//                    }
+//                }
+//            }
+//        }
+//        return labirinto;
+//    }
+
 }

@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fcc52a9-4955-4453-8e3f-e8d560536f42" name="Changes" comment="" />
+    <list default="true" id="0fcc52a9-4955-4453-8e3f-e8d560536f42" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Labirinto/Labirinto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Labirinto/Labirinto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/secondi_esercizi/Lampadina.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/secondi_esercizi/Lampadina.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/secondi_esercizi/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/secondi_esercizi/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +25,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2LDpk3MPJDSCEqpXg2nD4aI4Ane" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -33,10 +41,16 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Utente/OneDrive/Documenti/Miei Documenti/Corso Java 2023 Tree/Esercizi Corso Java&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.labirinto.Labirinto">
-    <configuration name="Anagrammi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Anagrammi" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="ContaOccorrenzeStringa" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="primi_esercizi.ContaOccorrenzeStringa" />
       <module name="Esercizi Corso Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="primi_esercizi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -51,6 +65,19 @@
     <configuration name="Labirinto" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Labirinto" />
       <module name="Esercizi Corso Java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="secondi_esercizi.Main" />
+      <module name="Esercizi Corso Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="secondi_esercizi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -70,10 +97,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.labirinto.Labirinto" />
+        <item itemvalue="Application.ContaOccorrenzeStringa" />
         <item itemvalue="Application.Labirinto" />
         <item itemvalue="Application.DispariAPari" />
-        <item itemvalue="Application.Anagrammi" />
       </list>
     </recent_temporary>
   </component>
@@ -87,5 +115,16 @@
       <updated>1675415649304</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/labirinto/Labirinto.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

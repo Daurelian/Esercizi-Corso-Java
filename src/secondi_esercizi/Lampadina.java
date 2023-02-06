@@ -2,17 +2,22 @@ package secondi_esercizi;
 
 public class Lampadina {
     static boolean corrente= true;
-    int[] stato;
+//    int[] stato;
+    protected Stato stato;
+     enum Stato{
+        SPENTO, ACCESO, ROTTO;
+    }
     int contatore=0;
     int resistenza;
 
     public Lampadina() {
-        this.stato = new int []{1,0,0};
+        this.stato = stato.SPENTO;
+
         resistenza=5;
     }
 
     public Lampadina(int resistenza) {
-        this.stato = new int []{1,0,0};
+        this.stato = stato.SPENTO;
         this.resistenza=resistenza;
     }
 
@@ -21,10 +26,10 @@ public class Lampadina {
 //            stato[0]=1;
 //            stato[1]=0;
 //        }
-        if (stato[0]==1)
+        if (stato==stato.SPENTO)
             System.out.println("Lampadina Spenta");
         else
-            if (stato[1]==1)
+            if (stato==stato.ACCESO)
                 System.out.println("Lampadina Accesa");
             else
                 System.out.println("Lampadina Rotta");
@@ -32,24 +37,21 @@ public class Lampadina {
 
     public void click(){
         if(!corrente){
-            stato[0]=1;
-            stato[1]=0;
+            stato= stato.SPENTO;
         }else{
-            if(this.stato[2]==1){
+            if(stato== stato.ROTTO){
                     mostraStato();
 
         }else{
-                if(this.stato[0]==1){
-                    this.stato[0]=0;
-                    this.stato[1]=1;
+                if(stato== stato.SPENTO){
+                    stato= stato.ACCESO;
 
                 }else{
-                    this.stato[0]=1;
-                    this.stato[1]=0;
+                    stato=stato.SPENTO;
                 }
                 contatore++;
                 checkContatore();
-                if(this.stato[2]==1){
+                if(stato==stato.ROTTO){
                     System.out.println("Boom!!!");
                 }
             }
@@ -60,9 +62,7 @@ public class Lampadina {
 
     public void checkContatore(){
         if (contatore==resistenza){
-            this.stato[0]=0;
-            this.stato[1]=0;
-            this.stato[2]=1;
+            stato=stato.ROTTO;
         }
 
     }
@@ -74,22 +74,16 @@ public class Lampadina {
     public void checkCorrente(){
         //Se volessimo che le lampadine si accendano al ritorno della corrente
         if(corrente){
-            if(this.stato[2]==0){
-                this.stato[0]=0;
-                this.stato[1]=1;
+            if(stato!=stato.ROTTO){
+                stato=stato.ACCESO;
             }else{
-                this.stato[0]=0;
-                this.stato[1]=0;
             }
         }
         //Altrimenti solo la riga sotto per spegnerle quando si stacca la corrente
         else{
-            if(this.stato[2]==0) {
-                stato[0] = 1;
-                stato[1] = 0;
+            if(stato!=stato.ROTTO) {
+                stato=stato.SPENTO;
             }else{
-                this.stato[0]=0;
-                this.stato[1]=0;
             }
 
         }

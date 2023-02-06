@@ -98,19 +98,19 @@ public class Main {
             if(checkInputInterruttori(input)==1){
                 interruttore1.click();
                 interruttore1.lampadina.mostraStato();
-                if(lampadinaTest.stato[2]==1){
+                if(lampadinaTest.stato== Lampadina.Stato.ROTTO){
                     return "Operazione Conclusa perché la lampadina si è rotta";
                 }
                return cicloInterruttori(interruttore1,interruttore2,lampadinaTest);
             }else if(checkInputInterruttori(input)==2){
                 interruttore2.click();;
                 interruttore2.lampadina.mostraStato();
-                if(lampadinaTest.stato[2]==1){
+                if(lampadinaTest.stato== Lampadina.Stato.ROTTO){
                     return "Operazione Conclusa perché la lampadina si è rotta";
                 }
                return cicloInterruttori(interruttore1,interruttore2, lampadinaTest);
             }else {
-                if(lampadinaTest.stato[2]==1){
+                if(lampadinaTest.stato== Lampadina.Stato.ROTTO){
                     return "Operazione Conclusa perché la lampadina si è rotta";
                 }
                return "Operazione Conclusa";
