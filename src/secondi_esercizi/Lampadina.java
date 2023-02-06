@@ -3,7 +3,7 @@ package secondi_esercizi;
 public class Lampadina {
     static boolean corrente= true;
 //    int[] stato;
-    protected Stato stato;
+    private Stato stato;
      enum Stato{
         SPENTO, ACCESO, ROTTO;
     }
@@ -21,11 +21,11 @@ public class Lampadina {
         this.resistenza=resistenza;
     }
 
+    public Stato getStato() {
+        return stato;
+    }
+
     public void mostraStato(){
-//        if(corrente==false){
-//            stato[0]=1;
-//            stato[1]=0;
-//        }
         if (stato==stato.SPENTO)
             System.out.println("Lampadina Spenta");
         else
