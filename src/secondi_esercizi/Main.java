@@ -33,8 +33,10 @@ public class Main {
 //        testLibri();
 //        System.out.println();
 
-         testDittaRiparazioni();
-         System.out.println();
+//         testDittaRiparazioni();
+//         System.out.println();
+            testNegozio();
+            System.out.println();
     }
 
     //Contatore
@@ -291,6 +293,97 @@ public class Main {
             tecniciFerie2[0]=tecnico1;
             tecniciFerie2[1]=tecnico2;
             ditta.mandainFerie(tecniciFerie2);
+        }
+
+        public static void testNegozio(){
+            Prodotto prodotto1= new Prodotto("mela",2.00,30,true);
+            Prodotto prodotto2= new Prodotto("pera",1.00,50,true);
+            Prodotto prodotto3= new Prodotto("camicia",20.00,10,false);
+            Prodotto prodotto4= new Prodotto("pasta",1.75,200,true);
+            Prodotto prodotto5= new Prodotto("passata",2.50,15,true);
+            Prodotto prodotto6= new Prodotto("maglietta",35.00,12,false);
+            Prodotto prodotto7= new Prodotto("felpa",35.00,14,false);
+            Negozio negozio= new Negozio();
+            System.out.println("Aggiungiamo singoli prodotti/n");
+            System.out.println();
+            negozio.aggiungiProdottoInventario(prodotto1);
+            negozio.aggiungiProdottoInventario(prodotto2);
+            negozio.aggiungiProdottoInventario(prodotto3);
+            negozio.aggiungiProdottoInventario(prodotto4);
+            negozio.aggiungiProdottoInventario(prodotto5);
+            negozio.aggiungiProdottoInventario(prodotto6);
+            negozio.aggiungiProdottoInventario(prodotto7);
+            negozio.stampaQuantitàProdotti();
+            System.out.println();
+            System.out.println("Aggiungiamo gli stessi prodotti e vediamo le quantità");
+            System.out.println();
+            negozio.aggiungiProdottoInventario(prodotto1);
+            negozio.aggiungiProdottoInventario(prodotto1);
+            negozio.aggiungiProdottoInventario(prodotto1);
+            negozio.aggiungiProdottoInventario(prodotto2);
+            negozio.aggiungiProdottoInventario(prodotto3);
+            negozio.aggiungiProdottoInventario(prodotto4);
+            negozio.aggiungiProdottoInventario(prodotto5);
+            negozio.aggiungiProdottoInventario(prodotto5); //qui
+            negozio.stampaQuantitàProdotti();
+            System.out.println();
+            System.out.println("Rimuoviamo le mele");
+            negozio.rimuoviProdottoInventario(prodotto1);
+            negozio.stampaQuantitàProdotti();
+            System.out.println();
+            System.out.println("Rimuoviamo ancora le mele");
+            negozio.rimuoviProdottoInventario(prodotto1);
+            negozio.stampaQuantitàProdotti();
+            System.out.println();
+            System.out.println("Rimuoviamo più felpe di quelle che avremmo");
+            Prodotto prodotto8= new Prodotto("felpa",35.00,33,false);
+            negozio.rimuoviProdottoInventario(prodotto8);
+            System.out.println();
+            negozio.stampaQuantitàProdotti();
+            System.out.println();
+            System.out.println("Creo un cliente");
+            Cliente giggino=new Cliente("Giggino", 72);
+            System.out.println();
+            System.out.println("Aggiungo prodotti al carrello");
+            giggino.aggiungiProdottoCarrello(prodotto1);
+            giggino.aggiungiProdottoCarrello(prodotto2);
+            giggino.aggiungiProdottoCarrello(prodotto3);
+            giggino.aggiungiProdottoCarrello(prodotto4);
+            giggino.aggiungiProdottoCarrello(prodotto5);
+            giggino.aggiungiProdottoCarrello(prodotto5); //qui
+            System.out.println("Visualizzo il suo carrello");
+            giggino.stampaQuantitàCarrello();
+            System.out.println();
+            System.out.println("Faccio un check del carrello per essere sicuro che ci siano solo prodotti del Negozio");
+            System.out.println(Arrays.toString(negozio.checkCarrello(giggino)));
+            System.out.println("Provo ad aggiungere un prodotto non esistente");
+            Prodotto prodottoFalso= new Prodotto("ferro da stiro", 0.0, 22, false);
+            giggino.aggiungiProdottoCarrello(prodottoFalso);
+            giggino.stampaQuantitàCarrello();
+            System.out.println("Faccio il check");
+            System.out.println(Arrays.toString(negozio.checkCarrello(giggino)));
+            System.out.println("Check riuscito");
+            System.out.println();
+            System.out.println("Vado alla cassa");
+            System.out.println("E' lunedì, il totale da pagare è");
+            negozio.visualizzaGiorno();
+            System.out.println(negozio.cassa(giggino));
+            System.out.println();
+            System.out.println("Mettiamo un giorno casuale e vediamo il totale");
+            System.out.println();
+            negozio.giornoCasuale();
+            negozio.visualizzaGiorno();
+            System.out.println("Faccio il check");
+            System.out.println(Arrays.toString(negozio.checkCarrello(giggino)));
+            System.out.println("Check riuscito");
+            System.out.println(negozio.cassa(giggino));
+            System.out.println("Vediamo se finite le scorte paga");
+            System.out.println("Faccio il check");
+            System.out.println(Arrays.toString(negozio.checkCarrello(giggino)));
+            System.out.println("Check riuscito");
+            System.out.println(negozio.cassa(giggino));
+
+
         }
 
 }
