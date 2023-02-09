@@ -35,8 +35,8 @@ public class Main {
 
 //         testDittaRiparazioni();
 //         System.out.println();
-            testNegozio();
-            System.out.println();
+//            testNegozio();
+//            System.out.println();
     }
 
     //Contatore
