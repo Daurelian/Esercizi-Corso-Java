@@ -11,6 +11,7 @@ public class Node <T>{
     public Node(T values) {
         this.values = values;
         this.next=null;
+        this.before=null;
     }
 
     public Node(T values, Node next, Node before) {
@@ -31,8 +32,8 @@ public class Node <T>{
         return next;
     }
 
-    public void setNext(Node successivo) {
-        this.next = successivo;
+    public void setNext(Node next) {
+        this.next = next;
     }
 
     public Node getBefore() {
