@@ -24,6 +24,14 @@ public class Main {
         System.out.println("\nAggiungo il primo");
         list.addFirst(node1);
         list.getList();
+        System.out.println("\nRimuovo ultimo nodo");
+        list.removeLastNodes();
+        list.getList();
+        System.out.println("\nE lo riaggingo");
+        list.addNodes(node5);
+        list.getList();
+        System.out.println("\nVedo il primo elemento della lista");
+        list.peek();
     }
 
 

@@ -36,17 +36,23 @@ public class LinkedListGenerics{
         if(head.getNext()==tail){
             head.setNext(node);
         }else{
+            node.setBefore(tail.getBefore());
             tail.getBefore().setNext(node);
+
         }
             node.setNext(tail);
             tail.setBefore(node);
     }
 
-    public void removeNodes(Node node){
+    public void removeLastNodes(){
         if(head.getNext()==tail){
             System.out.println("Nessun nodo da rimuovere");
-        }else
-            tail.getBefore().getBefore().setNext(tail);
+        }else{
+            Node temp;
+            tail.setBefore(tail.getBefore().getBefore());
+            tail.getBefore().setNext(tail);
+        }
+
     }
 
     public void getList(){
@@ -85,5 +91,9 @@ public class LinkedListGenerics{
             head.setNext(node);
             node.setNext(temp);
         }
+    }
+
+    public void peek(){
+        System.out.println(head.getNext());
     }
 }
