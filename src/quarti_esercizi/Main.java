@@ -30,6 +30,20 @@ public class Main {
         System.out.println("\nE lo riaggingo");
         list.addNodes(node5);
         list.getList();
+        System.out.println("\nRimuovo tutti i nodi");
+        list.removeLastNodes();
+        list.removeLastNodes();
+        list.removeLastNodes();
+        list.removeLastNodes();
+        list.removeLastNodes();
+        list.getList();
+        System.out.println("\nLi riaggiungo");
+        list.addNodes(node1);
+        list.addNodes(node2);
+        list.addNodes(node3);
+        list.addNodes(node4);
+        list.addNodes(node5);
+        list.getList();
         System.out.println("\nVedo il primo elemento della lista");
         list.peek();
     }

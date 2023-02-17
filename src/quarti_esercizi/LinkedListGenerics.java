@@ -79,6 +79,7 @@ public class LinkedListGenerics{
         }else{
            temp= head.getNext().getNext();
            head.setNext(temp);
+           temp.setBefore(head);
         }
     }
 
@@ -86,10 +87,13 @@ public class LinkedListGenerics{
         Node temp;
         if(head.getNext()==tail){
             head.setNext(node);
+            node.setBefore(head);
         }else{
             temp= head.getNext();
             head.setNext(node);
+            node.setBefore(head);
             node.setNext(temp);
+            temp.setBefore(node);
         }
     }
 
