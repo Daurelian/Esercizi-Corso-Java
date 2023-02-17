@@ -4,9 +4,9 @@ public class Main {
     public static void main(String[] args) {
         LinkedListGenerics list= new LinkedListGenerics();
         Node<Integer> node1= new Node<>(1);
-        Node<Integer> node2= new Node<>(2);
+        Node<Double> node2= new Node<>(2.0);
         Node<Integer> node3= new Node<>(3);
-        Node<Integer> node4= new Node<>(4);
+        Node<String> node4= new Node<>("Giggino");
         Node<Integer> node5= new Node<>(5);
 
         System.out.println("Creo lista e aggiungo nodi");
