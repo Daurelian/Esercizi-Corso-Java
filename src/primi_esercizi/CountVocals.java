@@ -3,15 +3,16 @@ package primi_esercizi;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ContaVocali {
+//Questo esercizio conterà le vocali data una parola o frase
+public class CountVocals {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a string:");
         String s = sc.nextLine();
-        numeroVocaliConsonanti(s);
+        countVocals(s);
     }
 
-    public static void numeroVocaliConsonanti(String s) {
+    public static void countVocals(String s) {
         ArrayList<Character> vocals = new ArrayList();
         vocals.add('a');
         vocals.add('e');
@@ -24,7 +25,7 @@ public class ContaVocali {
         }
         System.out.format("Numero vocali: %d", result);
         System.out.println();
-        System.out.format("Numero consonanti: %d", s.length() - result);
+        System.out.format("Numero consonanti e/o spazi: %d", s.length() - result);
 
     }
 
