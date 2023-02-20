@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fcc52a9-4955-4453-8e3f-e8d560536f42" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/terzi_esercizi/Autocarro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/terzi_esercizi/Automobile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/terzi_esercizi/Bevanda.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/terzi_esercizi/Caffe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/terzi_esercizi/Cappuccino.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/terzi_esercizi/DistributoreDiBevande.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/terzi_esercizi/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/terzi_esercizi/Quadrato.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/terzi_esercizi/Rettangolo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/terzi_esercizi/Veicoli.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/secondi_esercizi/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/secondi_esercizi/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,9 +38,9 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Utente/OneDrive/Documenti/Miei Documenti/Corso Java 2023 Tree/Esercizi Corso Java&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.terzi_esercizi.Main">
-    <configuration name="ContaOccorrenzeStringa" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="primi_esercizi.ContaOccorrenzeStringa" />
+  <component name="RunManager" selected="Application.turista_facoltoso.Main">
+    <configuration name="CountVocals" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="primi_esercizi.CountVocals" />
       <module name="Esercizi Corso Java" />
       <extension name="coverage">
         <pattern>
@@ -59,13 +48,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Labirinto" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Labirinto" />
-      <module name="Esercizi Corso Java" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -83,12 +65,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="labirinto.Labirinto" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="labirinto.Labirinto" />
+    <configuration name="quarti_esercizi.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="quarti_esercizi.Main" />
       <module name="Esercizi Corso Java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="labirinto.*" />
+          <option name="PATTERN" value="quarti_esercizi.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -109,13 +91,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="turista_facoltoso.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="turista_facoltoso.Main" />
+      <module name="Esercizi Corso Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="turista_facoltoso.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.turista_facoltoso.Main" />
+        <item itemvalue="Application.quarti_esercizi.Main" />
+        <item itemvalue="Application.CountVocals" />
         <item itemvalue="Application.terzi_esercizi.Main" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.labirinto.Labirinto" />
-        <item itemvalue="Application.ContaOccorrenzeStringa" />
-        <item itemvalue="Application.Labirinto" />
       </list>
     </recent_temporary>
   </component>
