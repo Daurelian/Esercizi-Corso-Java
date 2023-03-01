@@ -17,5 +17,23 @@ public class Main {
         calepinus.addWordMeaning(parola1, definizione1_3);
         calepinus.addWordMeaning(parola2, definizione2_1);
         System.out.println(calepinus);
+
+        System.out.println("\nRimuoviamo un elemento che non esiste");
+        try{
+            calepinus.removeWordMeaning("giggino");
+        }catch (WordNotPresentException e){
+            e.printStackTrace();
+        }
+
+        System.out.println("\n Rimuoviamo un elemento esistente");
+        try{
+            calepinus.removeWordMeaning("carro");
+        }catch (WordNotPresentException e){
+            e.printStackTrace();
+        }
+        System.out.println(calepinus);
+        System.out.println("\nProviamo ad aggiungere una chiave esistente");
+        calepinus.addKey('c');
+
     }
 }

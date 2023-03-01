@@ -39,14 +39,49 @@ public class Dictionary {
 
     }
 
-    public void addMeanings(String meaning){
+    public void removeWordMeaning(String word) throws  WordNotPresentException {
+        if (calepinus.containsKey(word.charAt(0)) && calepinus.get(word.charAt(0)).containsKey(word)){
+            calepinus.get(word.charAt(0)).remove(word);
+        }else{
+            throw new WordNotPresentException(word);
+        }
+    }
+
+    public void addKey(char c) {
+        try{
+            if (!calepinus.containsKey(c)) {
+                //TODO aggiungere chiave
+                calepinus.put(c, null);
+            }else{
+                throw new ElementAlreadyContainedException(c);
+            }
+
+        }catch (ElementAlreadyContainedException e){
+            e.printStackTrace();
+        }
 
     }
 
     @Override
     public String toString() {
-        return "Dictionary{" +
-                "calepinus=" + calepinus +
-                '}';
+        StringBuilder stringa = new StringBuilder();
+        int i=1;
+
+        for (Character character : calepinus.keySet()) {
+            stringa.append(character);
+
+            for (String parola : calepinus.get(character).keySet()) {
+                stringa.append("\n" + parola);
+
+                for (String definizione : calepinus.get(character).get(parola))
+                    stringa.append("\n[" +(i++)+ "] " +definizione);
+
+                stringa.append("\n");
+                i=1;
+            }
+            stringa.append("\n");
+        }
+
+        return stringa.toString();
     }
 }

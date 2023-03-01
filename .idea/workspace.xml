@@ -5,7 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fcc52a9-4955-4453-8e3f-e8d560536f42" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/dictionary/ElementAlreadyContainedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dictionary/WordNotPresentException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sesti_esercizi/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sesti_esercizi/MappadiRighe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sesti_esercizi/RigheInverse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sesti_esercizi/file_inverserigheinverse.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sesti_esercizi/file_mappadirighe.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sesti_esercizi/file_righeinverse.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dictionary/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dictionary/Dictionary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dictionary/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dictionary/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,26 +48,13 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Utente/OneDrive/Documenti/Miei Documenti/Corso Java 2023 Tree/Esercizi Corso Java&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.turista_facoltoso.Main">
-    <configuration name="CountVocals" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="primi_esercizi.CountVocals" />
-      <module name="Esercizi Corso Java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="primi_esercizi.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.sesti_esercizi.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="secondi_esercizi.Main" />
+      <option name="MAIN_CLASS_NAME" value="dictionary.Main" />
       <module name="Esercizi Corso Java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="secondi_esercizi.*" />
+          <option name="PATTERN" value="dictionary.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -78,12 +75,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="terzi_esercizi.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="terzi_esercizi.Main" />
+    <configuration name="quinti_esercizi.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="quinti_esercizi.Main" />
       <module name="Esercizi Corso Java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="terzi_esercizi.*" />
+          <option name="PATTERN" value="quinti_esercizi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="sesti_esercizi.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="sesti_esercizi.Main" />
+      <module name="Esercizi Corso Java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="sesti_esercizi.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -106,11 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.sesti_esercizi.Main" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.quinti_esercizi.Main" />
         <item itemvalue="Application.turista_facoltoso.Main" />
         <item itemvalue="Application.quarti_esercizi.Main" />
-        <item itemvalue="Application.CountVocals" />
-        <item itemvalue="Application.terzi_esercizi.Main" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -124,6 +134,17 @@
       <updated>1675415649304</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
