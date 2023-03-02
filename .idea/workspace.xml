@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fcc52a9-4955-4453-8e3f-e8d560536f42" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/dictionary/ElementAlreadyContainedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/dictionary/WordNotPresentException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sesti_esercizi/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sesti_esercizi/MappadiRighe.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sesti_esercizi/RigheInverse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sesti_esercizi/file_inverserigheinverse.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sesti_esercizi/file_mappadirighe.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sesti_esercizi/file_righeinverse.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dictionary/Dictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dictionary/Dictionary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dictionary/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dictionary/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/turista_facoltoso/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/turista_facoltoso/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/turista_facoltoso/Prenotazione.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/turista_facoltoso/Prenotazione.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/turista_facoltoso/SitoWeb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/turista_facoltoso/SitoWeb.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +41,7 @@
     &quot;last_opened_file_path&quot;: &quot;C:/Users/Utente/OneDrive/Documenti/Miei Documenti/Corso Java 2023 Tree/Esercizi Corso Java&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.sesti_esercizi.Main">
+  <component name="RunManager" selected="Application.turista_facoltoso.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dictionary.Main" />
       <module name="Esercizi Corso Java" />
@@ -116,10 +109,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.turista_facoltoso.Main" />
         <item itemvalue="Application.sesti_esercizi.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.quinti_esercizi.Main" />
-        <item itemvalue="Application.turista_facoltoso.Main" />
         <item itemvalue="Application.quarti_esercizi.Main" />
       </list>
     </recent_temporary>

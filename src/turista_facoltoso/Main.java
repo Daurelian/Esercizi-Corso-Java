@@ -24,6 +24,7 @@ import turista_facoltoso.utenti.Utente;
 import turista_facoltoso.utenti.Host;
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -69,7 +70,7 @@ public class Main {
 
         //Le abitazioni che saranno poi associate ai vari host
         Abitazione abitazione1 = new Abitazione("ab1", "Via uno, 1", 20, 4, 8, 0, data1, data6);
-        Abitazione abitazione2 = new Abitazione("ab2", "Via due, 2", 18, 2, 3, 3, data1, data6);
+        Abitazione abitazione2 = new Abitazione("ab2", "Via due, 2", 18, 2, 1, 3, data1, data6);
         Abitazione abitazione3 = new Abitazione("ab3", "Via tre, 3", 25, 1, 2, 1, data3, data6);
         Abitazione abitazione4 = new Abitazione("ab4", "Via four, 4", 30, 3, 6, 3, data4, data6);
 
@@ -127,5 +128,22 @@ public class Main {
         System.out.println("\nNumero medio di posti letto: " +sitoWeb.numeroMedioPostiLetto()+ "\n");
         System.out.println("\nSTAMPA UTENTI PIU' ATTIVI");
         sitoWeb.utentiPiuAttivi(Month.FEBRUARY);
+
+        //Set prenotazione1
+        prenotazione1.setCosto(40);
+        List<Prenotazione> prenotaziones=List.of(prenotazione1,prenotazione2,prenotazione4,prenotazione6);
+        System.out.println("\nProvaLambdaPrenotazione");
+        System.out.println(sitoWeb.lambdaPrenotazioniN(prenotaziones,35));
+
+        System.out.println("\nLista Utenti con prenotazione");
+        System.out.println(sitoWeb.lambdaPrenotazioneUtenti(prenotaziones));
+
+        System.out.println("\nLista Prenotazione Utente1");
+        System.out.println(sitoWeb.lambdaPrenotazioneUtente(prenotaziones,utente1.getID()));
+
+        //Set Abitazione
+        List<Abitazione> abitaziones= List.of(abitazione1,abitazione2,abitazione3,abitazione4);
+        System.out.println("\nNumero Abitazioni nella lista Host1 con più di 2 posti letto");
+        System.out.println(sitoWeb.lambdaAbitazioneHost(abitaziones,host1.getCodiceHost()));
     }
 }

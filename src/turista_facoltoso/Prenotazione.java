@@ -3,6 +3,7 @@ package turista_facoltoso;
 import java.time.LocalDate;
 
 public class Prenotazione {
+    private double costo;
     private int ID;
     private int ID_abitazione;
     private int ID_cliente;
@@ -18,8 +19,16 @@ public class Prenotazione {
 
         if (ID < 0)
             ID *= -1;
+        costo=30.0;
     }
 
+    public double getCosto() {
+        return costo;
+    }
+
+    public void setCosto(double costo) {
+        this.costo = costo;
+    }
     public int getIDAbitazione() {
         return ID_abitazione;
     }
@@ -32,7 +41,9 @@ public class Prenotazione {
         return data_fine;
     }
 
-
+    public int getID_cliente() {
+        return ID_cliente;
+    }
     @Override
     public String toString() {
         return "ID prenotazione: " +ID+ "\nID Cliente: " +ID_cliente+ "\nID abitazione: " +ID_abitazione+ "\nPeriodo: " +data_inizio+ " - " +data_fine;
